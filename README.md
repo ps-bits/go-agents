@@ -1,10 +1,10 @@
 # go-agents
-A wrapper around Go's concurrency. Gives an alternative flavor for doing concurrency.
+A package that gives an alternative flavor to Go's concurrency.
 
 ## Usage
-'Agents' are go routines that hold data (an internal state), and processes messages.
-To create an Agent, you need to declare a Message, Data and a "reader".
-Then create a manager, and then finally the Agent.
+'Agents' are go routines that hold data (an internal state), and processes messages, throug a function called a "reader".  
+To create an Agent, you need to first declare a Message, Data and a reader.  
+Then create a manager, and then finally the Agent.  
 
 ```go
 type Message struct {
