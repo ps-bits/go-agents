@@ -19,7 +19,7 @@ type Data struct {
 func reader(message Message, data *Data) int {
 	data.counter++
 	fmt.Println("I this message:", message.body, " for the ", data.counter, "th time!")
-	return 1 // return 1 for success
+	return 1 // return 1 for success, return -1 to stop the Agent process
 }
 
 manager := agents.NewManager[Message, Data]()
@@ -32,7 +32,3 @@ agentId := manager.NewAgent(reader, &Data{counter: 0}, 8)
 manager.SendTo(agentId, Message{body: "Hello!"})
 
 ```
-
-## Reader return values
-1: success
--1: stops the process
