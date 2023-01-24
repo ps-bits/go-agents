@@ -2,8 +2,8 @@
 A package that gives an alternative flavor to Go's concurrency.
 
 ## Usage
-'Agents' are go routines that hold data (an internal state), and processes messages, throug a function called a "reader".  
-To create an Agent, you need to first declare a Message, Data and a reader.  
+Agents are go-routines that hold data (an internal state), and processes messages, using a function called a "reader".  
+To create an Agent, you first need to declare a Message type, a Data type, and a reader.  
 Then create a manager, and then finally the Agent.  
 
 ```go
